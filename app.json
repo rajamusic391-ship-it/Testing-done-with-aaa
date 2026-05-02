@@ -1,0 +1,66 @@
+{
+  "name": "ZallyMusicBot",
+  "description": "A Telegram Music Player Bot, written in Python with Pyrogram and Py-Tgcalls.",
+  "logo": "https://telegra.ph/file/5a5039d21a5cedb5bd6bc-e25218a8dd3941e289.jpg",
+  "keywords": [
+    "python3",
+    "telegram",
+    "bot",
+    "MusicBot",
+    "telegram-bot",
+    "pyrogram"
+  ],
+  "env": {
+    "API_ID": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": "",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": "",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "A Bot's token from @BotFather",
+      "value": "",
+      "required": true
+    },
+    "MONGO_DB_URI": {
+      "description": "MongoDB connection string from https://cloud.mongodb.com",
+      "value": "",
+      "required": true
+    },
+    "OWNER_ID": {
+      "description": "Telegram user id of the bot owner",
+      "value": "",
+      "required": true
+    },
+    "STRING_SESSION": {
+      "description": "Pyrogram v2 String Session from @StringFatherBot",
+      "value": "",
+      "required": true
+    },
+    "LOGGER_ID": {
+      "description": "Log group id (numeric, e.g. -1001234567890). Add the bot as admin in that group.",
+      "value": "",
+      "required": true
+    },
+    "HEROKU_API_KEY": {
+      "description": "Optional - Your Heroku account API key (only if deploying on Heroku)",
+      "value": "",
+      "required": false
+    },
+    "HEROKU_APP_NAME": {
+      "description": "Optional - Your Heroku app name (only if deploying on Heroku)",
+      "value": "",
+      "required": false
+    }
+  },
+  "buildpacks": [
+    { "url": "heroku/python" },
+    { "url": "heroku/nodejs" },
+    { "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git" }
+  ],
+  "stack": "container"
+}
