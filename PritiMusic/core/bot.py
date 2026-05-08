@@ -15,7 +15,6 @@ class Lucky(Client):
             api_hash=config.API_HASH,
             bot_token=config.BOT_TOKEN,
             in_memory=True,
-            parse_mode=ParseMode.HTML,
             max_concurrent_transmissions=7,
         )
 
@@ -44,6 +43,7 @@ class Lucky(Client):
                     f"ɴᴀᴍᴇ : {self.name}\n"
                     f"ᴜsᴇʀɴᴀᴍᴇ : @{self.username}"
                 ),
+                parse_mode=ParseMode.HTML,
             )
         except (errors.ChannelInvalid, errors.PeerIdInvalid):
             LOGGER(__name__).error(
